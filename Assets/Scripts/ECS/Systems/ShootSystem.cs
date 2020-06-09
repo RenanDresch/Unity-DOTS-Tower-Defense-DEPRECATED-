@@ -80,7 +80,7 @@ namespace Game.ECS.Systems
                 {
                     gun.CurrentCooldown -= deltaTime;
                 }
-            }).ScheduleParallel(Dependency);
+            }).ScheduleParallel();
 
             m_EndSimulationEcbSystem.AddJobHandleForProducer(Dependency);
         }

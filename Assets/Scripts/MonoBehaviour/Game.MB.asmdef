@@ -1,0 +1,16 @@
+{
+    "name": "Game.MB",
+    "references": [
+        "GUID:ae39d61c645f4d2438455a660ffd1b08",
+        "GUID:734d92eba21c94caba915361bd5ac177"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

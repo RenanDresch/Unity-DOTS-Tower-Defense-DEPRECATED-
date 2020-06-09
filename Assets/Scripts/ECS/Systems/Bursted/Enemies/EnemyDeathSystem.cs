@@ -36,12 +36,15 @@ namespace Game.ECS.Systems
             {
                 if (!enemy_r.Active)
                 {
-                    var newProxy = new FXProxy_C()
+                    var newProxyComponent = new FXProxy_C()
                     {
                         Position = position_r.Value,
                         Rotation = rotation_r.Value,
                         FXCode = Contracts.Enums.FXCodeEnum.EnemyExplosion_01
                     };
+
+                    var newProxyEntity = ecb.CreateEntity(entityInQueryIndex);
+                    ecb.AddComponent(entityInQueryIndex, newProxyEntity, newProxyComponent);
 
                     ecb.DestroyEntity(entityInQueryIndex, e);
                 }

@@ -55,7 +55,10 @@ public class ApplicationManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+
+#if !UNITY_EDITOR
         SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+#endif
 
     }
     public void SwitchLoader(bool state, System.Action callback = null)

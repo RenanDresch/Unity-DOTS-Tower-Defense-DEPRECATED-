@@ -10,8 +10,6 @@ namespace Game.ECS.Systems
 {
     public class AimSystem : SystemBase
     {
-        private const float ROTATION_SPEED = 3;
-
         [BurstCompile]
         protected override void OnUpdate()
         {
@@ -42,7 +40,7 @@ namespace Game.ECS.Systems
                         }
 
                         var targetAngle = GetSignedAngle(currentForward, targetDirection);
-                        var nextRotation = ROTATION_SPEED * deltaTime * math.sign(targetAngle);
+                        var nextRotation = aim.RotationSpeed * deltaTime * math.sign(targetAngle);
 
                         if (math.abs(nextRotation) < math.abs(targetAngle))
                         {

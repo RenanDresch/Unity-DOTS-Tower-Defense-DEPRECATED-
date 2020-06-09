@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ParentUnit: {fileID: 8845551130579483612}
+  RotationSpeed: 3.6
   TargetDistance: 0
   Locked: 0
   ConfigurationState: 0
